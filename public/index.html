@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <!-- Modern Outfit Font for sleek look -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Dynamic animated mesh background -->
+    <div class="mesh-bg"></div>
+
+    <div class="app-wrapper">
+        <header class="header">
+            <h1>My Agenda</h1>
+            <p>What's your plan for today?</p>
+        </header>
+
+        <main class="main-content">
+            <form id="todo-form" class="todo-form">
+                <div class="input-wrapper">
+                    <input type="text" id="todo-input" placeholder="E.g., Design a spectacular new website..." autocomplete="off">
+                    <button type="submit" id="add-btn" class="add-btn">
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </form>
+
+            <div class="todo-container">
+                <div class="filter-tabs">
+                    <button class="filter-btn active" data-filter="all">All Tasks</button>
+                    <button class="filter-btn" data-filter="active">Active</button>
+                    <button class="filter-btn" data-filter="completed">Done</button>
+                </div>
+
+                <div id="loader" class="loader-container">
+                    <div class="spinner"></div>
+                </div>
+
+                <ul id="todo-list" class="todo-list">
+                    <!-- Tasks will be injected here via JavaScript -->
+                </ul>
+                
+                <div id="empty-state" class="empty-state" style="display: none;">
+                    <div class="empty-icon"><i class="fas fa-clipboard-check"></i></div>
+                    <h3>All caught up!</h3>
+                    <p>You have no tasks taking up space.</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
